@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Image Compressor</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🔥 Image Compressor Tool</h1>
+    <p>Compress JPG/PNG images online - free & fast</p>
+
+    <input type="file" id="upload" accept="image/*" />
+
+    <div id="stats">
+      <p><strong>Original Size:</strong> <span id="original-size">-</span></p>
+      <p><strong>Compressed Size:</strong> <span id="compressed-size">-</span></p>
+      <p><strong>Compression:</strong> <span id="compression-ratio">-</span></p>
+    </div>
+
+    <canvas id="canvas" style="display:none;"></canvas>
+
+    <button id="download" style="display:none;">📥 Download Compressed Image</button>
+
+    <p class="note">Supported Formats: JPG, PNG • Max Upload: 5MB</p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
