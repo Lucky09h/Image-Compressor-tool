@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Image Compressor Tool</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>Image Compressor Tool</h1>
+    <input type="file" id="upload" accept="image/*"/>
+    
+    <canvas id="canvas" style="display: none;"></canvas>
+    
+    <div class="info">
+      <p>📷 Original Size: <span id="original-size">-</span></p>
+      <p>🗜️ Compressed Size: <span id="compressed-size">-</span></p>
+      <p>📉 Compression: <span id="compression-ratio">-</span></p>
+    </div>
+
+    <a id="download" style="display:none;" class="btn" href="#">Download Compressed Image</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
