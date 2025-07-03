@@ -1,36 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BoostTextTools – Free SEO Text Tools (Word Counter, Hashtag Generator & More)</title>
-<meta name="description" content="BoostTextTools offers a suite of free online text tools including word counter, character counter, hashtag generator, and more. Designed for SEO, writing, and content optimization.">
-<meta name="keywords" content="word counter, character counter, hashtag generator, text tools, SEO tools, online writing tools, boost text tools">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta charset="UTF-8">
 
-  <!-- Ads or Monetag -->
+  <meta name="description" content="BoostTextTools offers a suite of free online text tools including word counter, character counter, hashtag generator, and more. Designed for SEO, writing, and content optimization.">
+  <meta name="keywords" content="word counter, character counter, hashtag generator, text tools, SEO tools, online writing tools, boost text tools">
+  <meta name="author" content="BoostTextTools Team">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="BoostTextTools – Free SEO Text Tools" />
+  <meta property="og:description" content="Free online text tools including word counter, hashtag generator, case converter & more." />
+  <meta property="og:url" content="https://boost-text-tools.netlify.app/" />
+  <meta property="og:type" content="website" />
+
+  <meta name="twitter:title" content="BoostTextTools – Free SEO Text Tools" />
+  <meta name="twitter:description" content="SEO-friendly online tools like word counter, hashtag generator, etc." />
+
+  <!-- Google Verification -->
+  <meta name="google-site-verification" content="K55DTPrL1Kh1slZIdac4TgaArhFDKk6ZVUFt6IY2f_M" />
+
+  <!-- Ads / Monetag -->
   <script src="https://fpyf8.com/88/tag.min.js" data-zone="155040" async data-cfasync="false"></script>
   <meta name="monetag" content="bd1652f634fa74b060102762dacff125">
 
-  <!-- ✅ Google Search Console Verification -->
-  <meta name="google-site-verification" content="K55DTPrL1Kh1slZIdac4TgaArhFDKk6ZVUFt6IY2f_M" />
-
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Free image compressor tool to reduce image size online without losing quality." />
-  <meta name="keywords" content="image compressor, compress images, online image compressor, reduce image size" />
-  <meta name="author" content="Your Name" />
-  <meta property="og:title" content="Free Online Image Compressor" />
-  <meta property="og:description" content="Reduce your image file size online for free without losing quality." />
-  <meta property="og:url" content="https://imagescompressortool.netlify.app/" />
-  <meta property="og:type" content="website" />
-  <meta name="twitter:title" content="Free Online Image Compressor" />
-  <meta name="twitter:description" content="Compress your images online easily and quickly." />
-  <title>Free Online Image Compressor - Compress JPG, PNG, JPEG</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Free Online Image Compressor Tool</h1>
-  <p>Compress your JPG, JPEG, and PNG images online for free. This tool helps reduce image size while maintaining high quality.</p>
-  <div class="container">
-    <h1>Image Compressor</h1>
-    <input type="file" id="
+  <h1>🚀 BoostTextTools</h1>
+  <p>Your free online hub for SEO-friendly text tools.</p>
+
+  <!-- Word Counter -->
+  <section>
+    <h2>Word Counter</h2>
+    <textarea id="wordInput" oninput="countWords()"></textarea>
+    <p>Words: <span id="wordCount">0</span></p>
+  </section>
+
+  <!-- Character Counter -->
+  <section>
+    <h2>Character Counter</h2>
+    <textarea id="charInput" oninput="countChars()"></textarea>
+    <p>Characters: <span id="charCount">0</span></p>
+  </section>
+
+  <!-- Reading Time Estimator -->
+  <section>
+    <h2>Reading Time Estimator</h2>
+    <textarea id="readInput" oninput="estimateReadingTime()"></textarea>
+    <p>Estimated Reading Time: <span id="readingTime">0</span> min</p>
+  </section>
+
+  <!-- Keyword Density Checker -->
+  <section>
+    <h2>Keyword Density Checker</h2>
+    <textarea id="densityInput"></textarea>
+    <button onclick="checkDensity()">Check Density</button>
+    <div id="densityOutput"></div>
+  </section>
+
+  <!-- Hashtag Generator -->
+  <section>
+    <h2>Hashtag Generator</h2>
+    <input type="text" id="hashtagInput" />
+    <button onclick="generateHashtags()">Generate</button>
+    <p>Hashtags: <span id="hashtagOutput"></span></p>
+  </section>
+
+  <!-- Case Converter -->
+  <section>
+    <h2>Case Converter</h2>
+    <textarea id="caseInput"></textarea>
+    <button onclick="convertCase('upper')">UPPERCASE</button>
+    <button onclick="convertCase('lower')">lowercase</button>
+  </section>
+
+  <!-- Line Counter -->
+  <section>
+    <h2>Line Counter</h2>
+    <textarea id="lineInput" oninput="countLines()"></textarea>
+    <p>Lines: <span id="lineCount">0</span></p>
+  </section>
+
+  <!-- Remove Extra Spaces -->
+  <section>
+    <h2>Remove Extra Spaces</h2>
+    <textarea id="spaceInput"></textarea>
+    <button onclick="removeSpaces()">Clean Text</button>
+    <p>Cleaned Text: <span id="cleanOutput"></span></p>
+  </section>
+
+  <!-- Meta Tag Generator -->
+  <section>
+    <h2>Meta Tag Generator</h2>
+    <input type="text" id="metaTitle" placeholder="Title" />
+    <input type="text" id="metaDesc" placeholder="Description" />
+    <button onclick="generateMetaTags()">Generate</button>
+    <pre id="metaOutput"></pre>
+  </section>
+
+  <!-- Privacy Policy Generator -->
+  <section>
+    <h2>Privacy Policy Generator</h2>
+    <input type="text" id="siteName" placeholder="Website Name" />
+    <input type="email" id="contactEmail" placeholder="Contact Email" />
+    <button onclick="generatePrivacy()">Generate</button>
+    <pre id="privacyOutput"></pre>
+  </section>
+
+  <footer>
+    <p>© 2025 BoostTextTools. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
